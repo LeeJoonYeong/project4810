@@ -1,0 +1,9 @@
+$main-color: gray;
+$sub-color: red;
+
+h6 {
+  &.box1 { border: 1px solid black; } 
+  color: $main-color; font-size: 20px;
+  > span { color: $sub-color; font-size: 20px; }
+  
+}
