@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/main.min.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
 
   <link
     rel="stylesheet"
@@ -11,13 +11,17 @@
   />
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script defer src="assets/js/bundle.min.js"></script>
+  <script defer src="assets/js/ui.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-  <title>Hivelab Project</title>
+  <title>Hivelab Project - first</title>
 </head>
 <body>
+  <div class="page">
+    <a href="./assets/html/index.html">첫번 째 과제 바로가기</a>
+    <a href="./assets/html/index2.html">두번 째 과제 바로가기</a>
+  </div>
   <div class="whole_wrap">
     <article class="shop">
       <section class="smile_fresh">
@@ -31,9 +35,9 @@
         </header>
         <div class="swiper">
           <div class="banner swiper-wrapper">
-            <img src="./assets/img/banner1.png" class="swiper-slide" alt="스마일프레시, 클럽 고객은 매일 15% 할인, 클럽 첫 구매 시 50% 할인">
+            <img src="./assets/img/banner1.png" class="swiper-slide" alt="스마일프레시, 원하는 신선함 그대로, 원하는 시간에 도착.">
             <img src="./assets/img/banner2.png" class="swiper-slide" alt="지금부터의 신선마켓, 스마일프레시">
-            <img src="./assets/img/banner1.png" class="swiper-slide" alt="스마일프레시, 클럽 고객은 매일 15% 할인, 클럽 첫 구매 시 50% 할인">
+            <img src="./assets/img/banner3.png" class="swiper-slide" alt="스마일프레시 쇼핑하러 가기">
           </div>
           <button class="btn swiper-button-prev">
             <span class="hide">이전 배너 버튼</span>
@@ -93,7 +97,7 @@
                   <div class="price">
                     <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
                     <span class="price_discount_percent">75%</span>
-                    <span class="price_result">2,380<span>원</span></span>
+                    <span class="price_result">2,380<span class="price_result_unit">원</span></span>
                   </div>
                 </div>
               </a>
@@ -109,7 +113,7 @@
                 <div class="description_box">
                   <strong>2개 사면 할인</strong>
                   <b><span class="brand_name">크리넥스</span>크리넥스 3겹 순수소프트 내추럴 30팩크리넥스 3겹 순수소프트 내추럴 30팩</b>
-                  <div class="price discounted">
+                  <div class="price">
                     <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
                     <span class="price_discount_percent">75%</span>
                     <span class="price_result">69.890<span class="price_result_unit">원</span></span>
@@ -131,7 +135,7 @@
                   <div class="price">
                     <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
                     <span class="price_discount_percent">75%</span>
-                    <span class="price_result">2,380<span>원</span></span>
+                    <span class="price_result">2,380<span class="price_result_unit">원</span></span>
                   </div>
                 </div>
               </a>
@@ -147,7 +151,7 @@
                 <div class="description_box">
                   <strong>2개 사면 할인</strong>
                   <b><span class="brand_name">크리넥스</span>크리넥스 3겹 순수소프트 내추럴 30팩...</b>
-                  <div class="price discounted">
+                  <div class="price">
                     <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
                     <span class="price_discount_percent">75%</span>
                     <span class="price_result">69.890<span class="price_result_unit">원</span></span>
@@ -169,7 +173,7 @@
                   <div class="price">
                     <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
                     <span class="price_discount_percent">75%</span>
-                    <span class="price_result">2,380<span>원</span></span>
+                    <span class="price_result">2,380<span class="price_result_unit">원</span></span>
                   </div>
                 </div>
               </a>
@@ -178,6 +182,9 @@
               </button>
             </li>
           </ul>
+        </div>
+        <div class="more">
+          <a href="#"><span>하나더 상품 더보기</span></a>
         </div>  
       </section>
       <section class="smile_delivery">
@@ -192,8 +199,8 @@
         <div class="swiper">
           <div class="banner swiper-wrapper">
             <img src="./assets/img/banner4.jpg" class="swiper-slide" alt="가볍대별로 골라보세요. 스마일배송 HOT PRICE, 누구나 30% 할인!">
-            <img src="./assets/img/banner2.png" class="swiper-slide" alt="지금부터의 신선마켓, 스마일프레시">
-            <img src="./assets/img/banner1.png" class="swiper-slide" alt="스마일프레시, 클럽 고객은 매일 15% 할인, 클럽 첫 구매 시 50% 할인">
+            <img src="./assets/img/banner5.jpg" class="swiper-slide" alt="스마일배송 베스트.">
+            <img src="./assets/img/banner6.jpg" class="swiper-slide" alt="2019설 스마일배송, 오늘 주문하고, 내일 받으세요.">
           </div>
           <button class="btn swiper-button-prev">
             <span class="hide">이전 배너 버튼</span>
@@ -226,7 +233,7 @@
                 <div class="description_box">
                   <strong>1</strong>
                   <b><span class="brand_name">크리넥스</span>크리넥스 3겹 순수소프트 내추럴 30팩크리넥스 3겹 순수소프트 내추럴 30팩</b>
-                  <div class="price discounted">
+                  <div class="price">
                     <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
                     <span class="price_discount_percent">75%</span>
                     <span class="price_result">69.890<span class="price_result_unit">원</span></span>
@@ -248,7 +255,7 @@
                   <div class="price">
                     <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
                     <span class="price_discount_percent">75%</span>
-                    <span class="price_result">2,380<span>원</span></span>
+                    <span class="price_result">2,380<span class="price_result_unit">원</span></span>
                   </div>
                 </div>
               </a>
@@ -264,7 +271,7 @@
                 <div class="description_box">
                   <strong>3</strong>
                   <b><span class="brand_name">크리넥스</span>크리넥스 3겹 순수소프트 내추럴 30팩크리넥스 3겹 순수소프트 내추럴 30팩</b>
-                  <div class="price discounted">
+                  <div class="price">
                     <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
                     <span class="price_discount_percent">75%</span>
                     <span class="price_result">69.890<span class="price_result_unit">원</span></span>
@@ -286,7 +293,7 @@
                   <div class="price">
                     <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
                     <span class="price_discount_percent">75%</span>
-                    <span class="price_result">2,380<span>원</span></span>
+                    <span class="price_result">2,380<span class="price_result_unit">원</span></span>
                   </div>
                 </div>
               </a>
@@ -302,7 +309,7 @@
                 <div class="description_box">
                   <strong>5</strong>
                   <b><span class="brand_name">크리넥스</span>크리넥스 3겹 순수소프트 내추럴 30팩...</b>
-                  <div class="price discounted">
+                  <div class="price">
                     <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
                     <span class="price_discount_percent">75%</span>
                     <span class="price_result">69.890<span class="price_result_unit">원</span></span>
@@ -324,7 +331,7 @@
                   <div class="price">
                     <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
                     <span class="price_discount_percent">75%</span>
-                    <span class="price_result">2,380<span>원</span></span>
+                    <span class="price_result">2,380<span class="price_result_unit">원</span></span>
                   </div>
                 </div>
               </a>
@@ -333,7 +340,10 @@
               </button>
             </li>
           </ul>
-        </div>   
+        </div>
+        <div class="more">
+          <a href="#"><span>베스트 상품 더보기</span></a>
+        </div>  
       </section>
     </article>
   </div>

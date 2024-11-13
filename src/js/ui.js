@@ -1,8 +1,7 @@
+// 스와이퍼 라이브러리 제어
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
   loop: false,
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -375,31 +374,26 @@ $(document).ready(function() {
 
   $('#link_btn_1').click(function(event) {
     event.preventDefault();
-
     createProductItem('smile_fresh', plusOne);
   });
 
   $('#link_btn_2').click(function(event) {
     event.preventDefault();
-
     createProductItem('smile_fresh', shearingGoods);
   });
 
   $('#link_btn_3').click(function(event) {
     event.preventDefault();
-
     createProductItem('smile_fresh', ohvanjang);
   });
 
   $('#link_btn_4').click(function(event) {
     event.preventDefault();
-
     createProductItem('smile_delivery', best);
   });
 
   $('#link_btn_5').click(function(event) {
     event.preventDefault();
-
     createProductItem('smile_delivery', freeDelivery);
   });
 
@@ -422,11 +416,11 @@ $(document).ready(function() {
       imgBox.append(img);
 
       const descriptionBox = $('<div>', { class: 'description_box' });
-      
+
       let productTag = shopTypeName === 'smile_fresh' ? '2개 사면 할인' : `${i + 1}`;
       const strongText = $('<strong>').text(productTag);
 
-      const boldText = $('<b>').html(`<span class="brand_name">${el.brand}</span>${el.title}}`);
+      const boldText = $('<b>').html(`<span class="brand_name">${el.brand}</span>${el.title}`);
 
       const priceClassName = el.isDiscounted ? 'discounted' : '';
       const priceBox = $('<div>', { class: `price ${priceClassName}` });
@@ -454,5 +448,31 @@ $(document).ready(function() {
     });
     
   }
+
+  // 툴팁 on/off
+  $('.btn_tooltip').click(function(event) {
+    $(this).toggleClass('active');
+  });
+
+  // 툴팁 버블링 차단
+  $('.btn_tooltip article').click(function(event) {
+    event.stopPropagation();
+  });
+
+  // 툴팁 닫기
+  $('.btn_tooltip .btn_close').click(function(event) {
+    $('.btn_tooltip').toggleClass('active');
+  });
+
+  // 배송 정보 on/off
+  $('.delivery_info .arrival_info_main .btn_control').click(function(event) {
+    $('.delivery_info .arrival_info_main').toggleClass('active');
+    $('.delivery_info .arrival_info_list').toggleClass('active').slideToggle(300);
+
+    const isExpanded = $(this).attr('aria-expanded') === 'true';
+    let brnText = isExpanded ? '열기' : '접기';
+    $(this).attr('aria-expanded', !isExpanded);
+    $(this).text(brnText);
+  });
 
 });

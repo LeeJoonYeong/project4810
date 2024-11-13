@@ -108,6 +108,24 @@ body {
   clip-path: polygon(0 0, 0 0, 0 0, 0 0);
 }
 
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+.page a {
+  font-size: 3rem;
+  color: black;
+  text-decoration: underline;
+}
+.page a ~ a {
+  margin-left: 2rem;
+}
+
 .whole_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -115,7 +133,7 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding-top: 10rem;
+  padding: 10rem 0;
 }
 
 .shop {
@@ -164,7 +182,7 @@ body {
 }
 .shop > section > header .shortcut_box a {
   padding-right: 3rem;
-  background: url(/assets/img/ico_shortcut.png) no-repeat right center/2.4rem;
+  background: url("../img/ico_shortcut.png") no-repeat right center/2.4rem;
 }
 .shop > section > header .shortcut_box a span {
   font-size: 1.6rem;
@@ -235,14 +253,16 @@ body {
   object-fit: contain;
 }
 .shop > section > .swiper > .btn {
-  width: 3rem;
+  width: 4rem;
   height: 4rem;
   position: absolute;
   top: 50%;
   left: 2rem;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  background: url(/assets/img/ico_arrow_left.png) no-repeat center/100%;
+  background: url("../img/ico_arrow_left.png") no-repeat center/60% white;
+  margin-top: 0;
+  border-radius: 100%;
 }
 .shop > section > .swiper > .btn.swiper-button-next {
   left: initial;
@@ -312,7 +332,7 @@ body {
   max-height: 3.4rem;
   font-size: 1.3rem;
   color: black;
-  margin: 0.3rem;
+  margin: 0.3rem 0;
 }
 .shop > section > .products > ul li > a .description_box > b .brand_name {
   display: inline-block;
@@ -358,15 +378,51 @@ body {
   font-size: 2.4rem;
   color: orangered;
 }
-.shop > section > .products > ul li > a > .shopping_cart {
+.shop > section > .products > ul li > .shopping_cart {
   position: absolute;
-  left: 5.5rem;
+  left: 7.5rem;
   bottom: 1rem;
   width: 3.5rem;
   height: 3.5rem;
   padding: 0.3rem;
-  background: url(/assets/img/ico_shopping_cart.png) no-repeat center/2rem white;
+  background: url("../img/ico_shopping_cart.png") no-repeat center/2rem white;
   border-radius: 100%;
+}
+.shop > section > .more {
+  margin-top: 2rem;
+}
+.shop > section > .more a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  border: 0.1rem solid gray;
+  border-radius: 10rem;
+  background-color: #efeeee;
+}
+.shop > section > .more a > span {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: black;
+}
+.shop > section > .more a > span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -3rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  background: url("../img/ico_shortcut.png") center/100% no-repeat;
 }
 .shop > section.smile_delivery > .categorys > ul > li > a.active {
   background-color: blue;
@@ -374,4 +430,199 @@ body {
 .shop > section.smile_delivery > .products ul li a .description_box > strong {
   background-color: blue;
   padding: 0.2rem 0.5rem;
+}
+
+.delivery_info .start_date {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: gray;
+  background: url("../img/ico_delivery.png") left 0.2rem center/2rem 2.5rem no-repeat;
+}
+.delivery_info .start_date .btn_tooltip {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url("../img/ico_tooltip.png") center/100% no-repeat;
+  margin-left: 0.2rem;
+}
+.delivery_info .start_date .btn_tooltip.active > article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.delivery_info .start_date .btn_tooltip > article {
+  display: none;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem 1.5rem;
+  background-color: white;
+  border: 0.1rem solid gray;
+  font-size: 1.2rem;
+  z-index: 100;
+  cursor: default;
+}
+.delivery_info .start_date .btn_tooltip > article > header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.delivery_info .start_date .btn_tooltip > article > header > strong {
+  color: black;
+  font-weight: 900;
+}
+.delivery_info .start_date .btn_tooltip > article > header .btn_close {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url("../img/ico_close.png") center/100% no-repeat;
+  cursor: pointer;
+}
+.delivery_info .start_date .btn_tooltip > article .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+}
+.delivery_info .start_date .btn_tooltip > article .desc > p {
+  position: relative;
+  padding: 0 6rem 0 1rem;
+  text-align: left;
+}
+.delivery_info .start_date .btn_tooltip > article .desc > p::after {
+  content: "·";
+  position: absolute;
+  top: 0;
+  left: 0.3rem;
+}
+.delivery_info .arrival_info {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 40rem;
+  border: 0.1rem solid lightgray;
+  margin-top: 1rem;
+}
+.delivery_info .arrival_info_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 0.1rem solid lightgray;
+  background-color: #efeeee;
+}
+.delivery_info .arrival_info_main.active .btn_control::after {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+.delivery_info .arrival_info_main > strong {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+.delivery_info .arrival_info_main .btn_control {
+  position: relative;
+  padding-right: 1.2rem;
+  font-size: 1rem;
+}
+.delivery_info .arrival_info_main .btn_control::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  background: url("../img/ico_arrow_top.png") center right/100% no-repeat;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.delivery_info .arrival_info_list {
+  padding: 1rem 2rem;
+}
+.delivery_info .arrival_info_list > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.delivery_info .arrival_info_list > ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5em;
+  font-size: 1.2rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.delivery_info .arrival_info_list > ul li:nth-of-type(2) .progress .percent {
+  width: 86%;
+}
+.delivery_info .arrival_info_list > ul li:nth-of-type(3) .progress .percent {
+  width: 26%;
+}
+.delivery_info .arrival_info_list > ul li .progress {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 0.6rem;
+  background-color: #efeeee;
+  border-radius: 10rem;
+}
+.delivery_info .arrival_info_list > ul li .progress .percent {
+  position: absolute;
+  width: 76%;
+  height: 100%;
+  background-color: darkgray;
+  border-radius: 10rem;
+}
+.delivery_info .arrival_info_list > ul li.active b {
+  color: blue;
+}
+.delivery_info .arrival_info_list > ul li.active .progress .percent {
+  background-color: blue;
+}
+.delivery_info .arrival_info_list > ul li.active span {
+  color: blue;
+}
+.delivery_info .arrival_info_list .division_line {
+  width: 100%;
+  height: 0.2rem;
+  background-color: #efeeee;
+  margin: 1rem 0;
 }

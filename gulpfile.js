@@ -1,4 +1,3 @@
-        
 import gulp from 'gulp';
 const { src, dest, parallel, series, watch } = gulp;
 
@@ -33,14 +32,10 @@ function js() {
 
   return src(source)
     .pipe(changed(source))
-    .pipe(concat('bundle.js'))
-    .pipe(uglify())
-    .pipe(rename({
-      extname: '.min.js'
-    }))
+    .pipe(concat('ui.js'))
     .pipe(dest('./assets/js/'))
     .pipe(browsersync.stream());
-    
+  
 }
 
 // CSS function 
@@ -54,9 +49,6 @@ function css() {
     .pipe(autoprefixer({
       overrideBrowserslist: ['> 1%', 'last 2 versions'],
       cascade: false
-    }))
-    .pipe(rename({
-      extname: '.min.css'
     }))
     .pipe(dest('./assets/css/'))
     .pipe(browsersync.stream());
@@ -75,7 +67,7 @@ function img() {
 // html
 function html() {
 
-  const source = './index.html';
+  const source = './*.html';
 
   return src(source)
     .pipe(changed(source))
@@ -90,7 +82,7 @@ function watchFiles() {
   watch('./src/scss/*', css);
   watch('./src/js/*', js);
   watch('./src/img/*', img);
-  watch('./index.html', html);
+  watch('./*.html', html);
 
 }
 
