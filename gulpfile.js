@@ -52,13 +52,12 @@ function css() {
     .pipe(changed(source))
     .pipe(sass())
     .pipe(autoprefixer({
-      overrideBrowserslist: ['last 2 versions'],
+      overrideBrowserslist: ['> 1%', 'last 2 versions'],
       cascade: false
     }))
     .pipe(rename({
       extname: '.min.css'
     }))
-    .pipe(cssnano())
     .pipe(dest('./assets/css/'))
     .pipe(browsersync.stream());
 

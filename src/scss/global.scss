@@ -7,6 +7,7 @@ $colorGreen: mediumseagreen;
 $colorLightgreen: lightgreen;
 $colorForestgreen: forestgreen;
 $colorCornflowerblue: cornflowerblue;
+$colorBlue: blue;
 $colorOrangered: orangered;
 
 .whole_wrap { display: flex; justify-content: center; padding-top: 10rem; }
@@ -14,6 +15,8 @@ $colorOrangered: orangered;
   display: flex; justify-content: center; gap: 3rem; width: 128rem; 
   > section { 
     flex: 1; display: flex; flex-direction: column; position: relative;
+
+    // 헤더 공통
     > header { flex-shrink: 0; display: flex; justify-content: space-between; 
       > h2 { font-size: 2.4rem; }
       .shortcut_box {
@@ -24,10 +27,12 @@ $colorOrangered: orangered;
         }
       }
     }
+
+    // 카테고리 공통
     > .categorys { 
       margin-top: 2rem;
       > ul {
-        display: flex; justify-content: space-between;
+        display: flex; justify-content: center;
         > li {
           position: relative; padding: 0 5rem;
           &:not(:last-child)::after { content: ''; position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 0.1rem; height: 50%; background-color: $colorLightgray;  }
@@ -44,6 +49,7 @@ $colorOrangered: orangered;
       }
     }
 
+    // 배너 공통
     > .swiper {
       width: 62.5rem; height: 25rem; margin-top: 2rem;
       > .banner {
@@ -57,6 +63,7 @@ $colorOrangered: orangered;
       }
     }
 
+    // 제품 공통
     > .products {
       margin-top: 2rem;
       > ul {
@@ -67,23 +74,33 @@ $colorOrangered: orangered;
             display: flex; gap: 1.5rem;
             .img_box {
               flex-shrink: 0; position: relative; width: 12rem; height: 12rem; padding: .3rem; border: .1rem solid $colorBlack; border-radius: 1rem; 
-              img { width: 100%; }
+              img { width: 100%; height: 100%; }
             }
             .description_box {
               display: flex; flex-direction: column;
               > strong { display: inline-block; width: max-content; padding: .2rem; background-color: $colorForestgreen; font-size: 1.4rem; color: $colorWhite; }
               > b { 
-                font-size: 1.3rem; color: $colorBlack; margin: .3rem;
+                overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; max-height: 3.4rem; font-size: 1.3rem; color: $colorBlack; margin: .3rem;
                 .brand_name { display: inline-block; margin-right: .2rem; color: $colorCornflowerblue; }
               }
               .price {
                 &_coupon { 
-                  display: flex; font-size: 1.6rem; font-weight: 700; color: $colorOrangered; 
+                  display: none; font-size: 1.6rem; font-weight: 700; color: $colorOrangered; 
                   > del { color: $colorDarkgray; }
                 }
-                &_discount_percent { font-size: 2.4rem; font-weight: 600; color: $colorOrangered; }
+                &_discount_percent { display: none; font-size: 2.4rem; font-weight: 600; color: $colorOrangered; }
                 &_result {
-                  font-size: 2.6rem; font-weight: 800;
+                  font-size: 2.6rem; font-weight: 800; color: $colorBlack;
+                  &_unit { font-size: 1.6rem; color: $colorDarkgray; }
+                }
+
+                &.discounted {
+                  .price_coupon { display: flex; }
+                  .price_discount_percent { display: initial; }
+                  .price_result { 
+                    color: $colorOrangered; 
+                    &_unit { font-size: 2.4rem; color: $colorOrangered 
+                  }
                 }
                 
               }
@@ -94,11 +111,34 @@ $colorOrangered: orangered;
       }
     }
 
+    }
+
+    // 스마일 배송
+    &.smile_delivery {
+      > .categorys { 
+        > ul {
+          > li {
+            > a {
+              &.active { 
+                background-color: $colorBlue;
+              }
+            }
+          }
+        }
+      }
+
+      > .products {
+        ul {
+          li {
+            a {
+              .description_box {
+                > strong { background-color: $colorBlue; padding: .2rem .5rem; }
+              }
+            }
+          }
+        }
+      }
+    }
+
   }
-
 }
-
-// .swiper {
-//   width: 600px;
-//   height: 300px;
-// }

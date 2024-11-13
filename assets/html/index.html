@@ -12,6 +12,9 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script defer src="assets/js/bundle.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
   <title>Hivelab Project</title>
 </head>
 <body>
@@ -42,17 +45,17 @@
         <nav class="categorys">
           <ul>
             <li>
-              <a href="#" class="LinkBtn active">
+              <a href="#" id="link_btn_1" class="LinkBtn active">
                 <span>하나더</span>
               </a>
             </li>
             <li>
-              <a href="#" class="LinkBtn">
+              <a href="#" id="link_btn_2" class="LinkBtn">
                 <span>전단상품</span>
               </a>
             </li>
             <li>
-              <a href="#" class="LinkBtn">
+              <a href="#" id="link_btn_3" class="LinkBtn">
                 <span>오반장</span>
               </a>
             </li>
@@ -67,11 +70,87 @@
                 </div>
                 <div class="description_box">
                   <strong>2개 사면 할인</strong>
+                  <b><span class="brand_name">크리넥스</span>크리넥스 3겹 순수소프트 내추럴 30팩크리넥스 3겹 순수소프트 내추럴 30팩</b>
+                  <div class="price discounted">
+                    <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
+                    <span class="price_discount_percent">75%</span>
+                    <span class="price_result">69.890<span class="price_result_unit">원</span></span>
+                  </div>
+                </div>
+              </a>
+              <button class="shopping_cart">
+                <span class="hide">장바구니 담기 버튼</span>
+              </button>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img_box">
+                  <img src="./assets/img/smile_fresh_item_02.jpg" alt="CJ 다담 순두부 찌개 상품 이미지">
+                </div>
+                <div class="description_box">
+                  <strong>2개 사면 할인</strong>
+                  <b><span class="brand_name">백설</span>CJ 다담 순두부 찌개 양념 140g</b>
+                  <div class="price">
+                    <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
+                    <span class="price_discount_percent">75%</span>
+                    <span class="price_result">2,380<span>원</span></span>
+                  </div>
+                </div>
+              </a>
+              <button class="shopping_cart">
+                <span class="hide">장바구니 담기 버튼</span>
+              </button>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img_box">
+                  <img src="./assets/img/smile_fresh_item_01.jpg" alt="크리넥스 휴지 이미지">
+                </div>
+                <div class="description_box">
+                  <strong>2개 사면 할인</strong>
+                  <b><span class="brand_name">크리넥스</span>크리넥스 3겹 순수소프트 내추럴 30팩크리넥스 3겹 순수소프트 내추럴 30팩</b>
+                  <div class="price discounted">
+                    <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
+                    <span class="price_discount_percent">75%</span>
+                    <span class="price_result">69.890<span class="price_result_unit">원</span></span>
+                  </div>
+                </div>
+              </a>
+              <button class="shopping_cart">
+                <span class="hide">장바구니 담기 버튼</span>
+              </button>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img_box">
+                  <img src="./assets/img/smile_fresh_item_02.jpg" alt="CJ 다담 순두부 찌개 상품 이미지">
+                </div>
+                <div class="description_box">
+                  <strong>2개 사면 할인</strong>
+                  <b><span class="brand_name">백설</span>CJ 다담 순두부 찌개 양념 140g</b>
+                  <div class="price">
+                    <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
+                    <span class="price_discount_percent">75%</span>
+                    <span class="price_result">2,380<span>원</span></span>
+                  </div>
+                </div>
+              </a>
+              <button class="shopping_cart">
+                <span class="hide">장바구니 담기 버튼</span>
+              </button>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img_box">
+                  <img src="./assets/img/smile_fresh_item_01.jpg" alt="크리넥스 휴지 이미지">
+                </div>
+                <div class="description_box">
+                  <strong>2개 사면 할인</strong>
                   <b><span class="brand_name">크리넥스</span>크리넥스 3겹 순수소프트 내추럴 30팩...</b>
                   <div class="price discounted">
                     <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
                     <span class="price_discount_percent">75%</span>
-                    <span class="price_result">69.890<span>원</span></span>
+                    <span class="price_result">69.890<span class="price_result_unit">원</span></span>
                   </div>
                 </div>
               </a>
@@ -82,34 +161,15 @@
             <li>
               <a href="#">
                 <div class="img_box">
-                  <img src="./assets/img/smile_fresh_item_01.jpg" alt="크리넥스 휴지 이미지">
+                  <img src="./assets/img/smile_fresh_item_02.jpg" alt="CJ 다담 순두부 찌개 상품 이미지">
                 </div>
                 <div class="description_box">
                   <strong>2개 사면 할인</strong>
-                  <b><span class="brand_name">크리넥스</span>크리넥스 3겹 순수소프트 내추럴 30팩...</b>
+                  <b><span class="brand_name">백설</span>CJ 다담 순두부 찌개 양념 140g</b>
                   <div class="price">
                     <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
                     <span class="price_discount_percent">75%</span>
-                    <span class="price_result">69.890<span>원</span></span>
-                  </div>
-                </div>
-              </a>
-              <button class="shopping_cart">
-                <span class="hide">장바구니 담기 버튼</span>
-              </button>
-            </li>
-            <li>
-              <a href="#">
-                <div class="img_box">
-                  <img src="./assets/img/smile_fresh_item_01.jpg" alt="크리넥스 휴지 이미지">
-                </div>
-                <div class="description_box">
-                  <strong>2개 사면 할인</strong>
-                  <b><span class="brand_name">크리넥스</span>크리넥스 3겹 순수소프트 내추럴 30팩...</b>
-                  <div class="price">
-                    <div class="price-coupon">쿠폰적용가<del>291.200원</del></div>
-                    <span class="price-discount-percent">75%</span>
-                    <span class="price-result">69.890<span>원</span></span>
+                    <span class="price_result">2,380<span>원</span></span>
                   </div>
                 </div>
               </a>
@@ -145,22 +205,135 @@
         <nav class="categorys">
           <ul>
             <li>
-              <a href="#" class="LinkBtn active">
-                <span>하나더</span>
+              <a href="#" id="link_btn_4" class="LinkBtn active">
+                <span>베스트</span>
               </a>
             </li>
             <li>
-              <a href="#" class="LinkBtn">
-                <span>전단상품</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="LinkBtn">
-                <span>오반장</span>
+              <a href="#" id="link_btn_5" class="LinkBtn">
+                <span>무료배송</span>
               </a>
             </li>
           </ul>
-        </nav>  
+        </nav>
+        <div class="products">
+          <ul>
+            <li>
+              <a href="#">
+                <div class="img_box">
+                  <img src="./assets/img/smile_fresh_item_01.jpg" alt="크리넥스 휴지 이미지">
+                </div>
+                <div class="description_box">
+                  <strong>1</strong>
+                  <b><span class="brand_name">크리넥스</span>크리넥스 3겹 순수소프트 내추럴 30팩크리넥스 3겹 순수소프트 내추럴 30팩</b>
+                  <div class="price discounted">
+                    <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
+                    <span class="price_discount_percent">75%</span>
+                    <span class="price_result">69.890<span class="price_result_unit">원</span></span>
+                  </div>
+                </div>
+              </a>
+              <button class="shopping_cart">
+                <span class="hide">장바구니 담기 버튼</span>
+              </button>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img_box">
+                  <img src="./assets/img/smile_fresh_item_02.jpg" alt="CJ 다담 순두부 찌개 상품 이미지">
+                </div>
+                <div class="description_box">
+                  <strong>2</strong>
+                  <b><span class="brand_name">백설</span>CJ 다담 순두부 찌개 양념 140g</b>
+                  <div class="price">
+                    <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
+                    <span class="price_discount_percent">75%</span>
+                    <span class="price_result">2,380<span>원</span></span>
+                  </div>
+                </div>
+              </a>
+              <button class="shopping_cart">
+                <span class="hide">장바구니 담기 버튼</span>
+              </button>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img_box">
+                  <img src="./assets/img/smile_fresh_item_01.jpg" alt="크리넥스 휴지 이미지">
+                </div>
+                <div class="description_box">
+                  <strong>3</strong>
+                  <b><span class="brand_name">크리넥스</span>크리넥스 3겹 순수소프트 내추럴 30팩크리넥스 3겹 순수소프트 내추럴 30팩</b>
+                  <div class="price discounted">
+                    <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
+                    <span class="price_discount_percent">75%</span>
+                    <span class="price_result">69.890<span class="price_result_unit">원</span></span>
+                  </div>
+                </div>
+              </a>
+              <button class="shopping_cart">
+                <span class="hide">장바구니 담기 버튼</span>
+              </button>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img_box">
+                  <img src="./assets/img/smile_fresh_item_02.jpg" alt="CJ 다담 순두부 찌개 상품 이미지">
+                </div>
+                <div class="description_box">
+                  <strong>4</strong>
+                  <b><span class="brand_name">백설</span>CJ 다담 순두부 찌개 양념 140g</b>
+                  <div class="price">
+                    <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
+                    <span class="price_discount_percent">75%</span>
+                    <span class="price_result">2,380<span>원</span></span>
+                  </div>
+                </div>
+              </a>
+              <button class="shopping_cart">
+                <span class="hide">장바구니 담기 버튼</span>
+              </button>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img_box">
+                  <img src="./assets/img/smile_fresh_item_01.jpg" alt="크리넥스 휴지 이미지">
+                </div>
+                <div class="description_box">
+                  <strong>5</strong>
+                  <b><span class="brand_name">크리넥스</span>크리넥스 3겹 순수소프트 내추럴 30팩...</b>
+                  <div class="price discounted">
+                    <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
+                    <span class="price_discount_percent">75%</span>
+                    <span class="price_result">69.890<span class="price_result_unit">원</span></span>
+                  </div>
+                </div>
+              </a>
+              <button class="shopping_cart">
+                <span class="hide">장바구니 담기 버튼</span>
+              </button>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img_box">
+                  <img src="./assets/img/smile_fresh_item_02.jpg" alt="CJ 다담 순두부 찌개 상품 이미지">
+                </div>
+                <div class="description_box">
+                  <strong>6</strong>
+                  <b><span class="brand_name">백설</span>CJ 다담 순두부 찌개 양념 140g</b>
+                  <div class="price">
+                    <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
+                    <span class="price_discount_percent">75%</span>
+                    <span class="price_result">2,380<span>원</span></span>
+                  </div>
+                </div>
+              </a>
+              <button class="shopping_cart">
+                <span class="hide">장바구니 담기 버튼</span>
+              </button>
+            </li>
+          </ul>
+        </div>   
       </section>
     </article>
   </div>
