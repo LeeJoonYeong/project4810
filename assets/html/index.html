@@ -3,13 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/main.min.css">
-  <script defer src="../js/bundle.min.js"></script>
-  <title>걸프</title>
+  <link rel="stylesheet" href="assets/css/main.min.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="assets/js/bundle.min.js"></script>
+  <title>Hivelab Project</title>
 </head>
 <body>
-  <h6 class="box1">걸프 테스트22
-    <span>5</span>
-  </h6>
+  <div class="whole_wrap">
+    <article class="shop">
+      <section class="smile_fresh">
+        <header>
+          <h2>지금부터의 신선마켓, 스마일프레시</h2>
+          <div class="shortcut_box">
+            <a href="#">
+              <span>바로가기</span>
+            </a>
+          </div>
+        </header>
+        <div class="swiper">
+          <div class="banner swiper-wrapper">
+            <img src="./assets/img/banner1.png" class="swiper-slide" alt="스마일프레시, 클럽 고객은 매일 15% 할인, 클럽 첫 구매 시 50% 할인">
+            <img src="./assets/img/banner2.png" class="swiper-slide" alt="지금부터의 신선마켓, 스마일프레시">
+            <img src="./assets/img/banner1.png" class="swiper-slide" alt="스마일프레시, 클럽 고객은 매일 15% 할인, 클럽 첫 구매 시 50% 할인">
+          </div>
+          <button class="btn swiper-button-prev">
+            <span class="hide">이전 배너 버튼</span>
+          </button>
+          <button class="btn swiper-button-next">
+            <span class="hide">다음 배너 버튼</span>
+          </button>
+        </div>
+        <nav class="categorys">
+          <ul>
+            <li>
+              <a href="#" class="LinkBtn active">
+                <span>하나더</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="LinkBtn">
+                <span>전단상품</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="LinkBtn">
+                <span>오반장</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="products">
+          <ul>
+            <li>
+              <a href="#">
+                <div class="img_box">
+                  <img src="./assets/img/smile_fresh_item_01.jpg" alt="크리넥스 휴지 이미지">
+                </div>
+                <div class="description_box">
+                  <strong>2개 사면 할인</strong>
+                  <b><span class="brand_name">크리넥스</span>크리넥스 3겹 순수소프트 내추럴 30팩...</b>
+                  <div class="price discounted">
+                    <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
+                    <span class="price_discount_percent">75%</span>
+                    <span class="price_result">69.890<span>원</span></span>
+                  </div>
+                </div>
+              </a>
+              <button class="shopping_cart">
+                <span class="hide">장바구니 담기 버튼</span>
+              </button>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img_box">
+                  <img src="./assets/img/smile_fresh_item_01.jpg" alt="크리넥스 휴지 이미지">
+                </div>
+                <div class="description_box">
+                  <strong>2개 사면 할인</strong>
+                  <b><span class="brand_name">크리넥스</span>크리넥스 3겹 순수소프트 내추럴 30팩...</b>
+                  <div class="price">
+                    <div class="price_coupon">쿠폰적용가<del>291.200원</del></div>
+                    <span class="price_discount_percent">75%</span>
+                    <span class="price_result">69.890<span>원</span></span>
+                  </div>
+                </div>
+              </a>
+              <button class="shopping_cart">
+                <span class="hide">장바구니 담기 버튼</span>
+              </button>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img_box">
+                  <img src="./assets/img/smile_fresh_item_01.jpg" alt="크리넥스 휴지 이미지">
+                </div>
+                <div class="description_box">
+                  <strong>2개 사면 할인</strong>
+                  <b><span class="brand_name">크리넥스</span>크리넥스 3겹 순수소프트 내추럴 30팩...</b>
+                  <div class="price">
+                    <div class="price-coupon">쿠폰적용가<del>291.200원</del></div>
+                    <span class="price-discount-percent">75%</span>
+                    <span class="price-result">69.890<span>원</span></span>
+                  </div>
+                </div>
+              </a>
+              <button class="shopping_cart">
+                <span class="hide">장바구니 담기 버튼</span>
+              </button>
+            </li>
+          </ul>
+        </div>  
+      </section>
+      <section class="smile_delivery">
+        <header>
+          <h2>오늘 주문 내일 도착, 스마일배송</h2>
+          <div class="shortcut_box">
+            <a href="#">
+              <span>바로가기</span>
+            </a>
+          </div>
+        </header>
+        <div class="swiper">
+          <div class="banner swiper-wrapper">
+            <img src="./assets/img/banner4.jpg" class="swiper-slide" alt="가볍대별로 골라보세요. 스마일배송 HOT PRICE, 누구나 30% 할인!">
+            <img src="./assets/img/banner2.png" class="swiper-slide" alt="지금부터의 신선마켓, 스마일프레시">
+            <img src="./assets/img/banner1.png" class="swiper-slide" alt="스마일프레시, 클럽 고객은 매일 15% 할인, 클럽 첫 구매 시 50% 할인">
+          </div>
+          <button class="btn swiper-button-prev">
+            <span class="hide">이전 배너 버튼</span>
+          </button>
+          <button class="btn swiper-button-next">
+            <span class="hide">다음 배너 버튼</span>
+          </button>
+        </div>  
+        <nav class="categorys">
+          <ul>
+            <li>
+              <a href="#" class="LinkBtn active">
+                <span>하나더</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="LinkBtn">
+                <span>전단상품</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="LinkBtn">
+                <span>오반장</span>
+              </a>
+            </li>
+          </ul>
+        </nav>  
+      </section>
+    </article>
+  </div>
 </body>
 </html>

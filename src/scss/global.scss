@@ -1,9 +1,104 @@
-$main-color: gray;
-$sub-color: red;
+$colorBlack: black;
+$colorWhite: white;
+$colorGray: gray;
+$colorLightgray: lightgray;
+$colorDarkgray: darkgray;
+$colorGreen: mediumseagreen;
+$colorLightgreen: lightgreen;
+$colorForestgreen: forestgreen;
+$colorCornflowerblue: cornflowerblue;
+$colorOrangered: orangered;
 
-h6 {
-  &.box1 { border: 1px solid black; } 
-  color: $main-color; font-size: 20px;
-  > span { color: $sub-color; font-size: 20px; }
-  
+.whole_wrap { display: flex; justify-content: center; padding-top: 10rem; }
+.shop {
+  display: flex; justify-content: center; gap: 3rem; width: 128rem; 
+  > section { 
+    flex: 1; display: flex; flex-direction: column; position: relative;
+    > header { flex-shrink: 0; display: flex; justify-content: space-between; 
+      > h2 { font-size: 2.4rem; }
+      .shortcut_box {
+        display: flex; align-items: center;
+        a { 
+          padding-right: 3rem; background: url(/assets/img/ico_shortcut.png) no-repeat right center / 2.4rem;
+          span { font-size: 1.6rem; font-weight: 500; color: $colorGray; }
+        }
+      }
+    }
+    > .categorys { 
+      margin-top: 2rem;
+      > ul {
+        display: flex; justify-content: space-between;
+        > li {
+          position: relative; padding: 0 5rem;
+          &:not(:last-child)::after { content: ''; position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 0.1rem; height: 50%; background-color: $colorLightgray;  }
+          > a {
+            display: flex; justify-content: center; align-items: center; width: max-content; height: 4rem; padding: 0 3rem; border-radius: 10rem;
+            &.active { 
+              background-color: $colorGreen;
+              > span { color: $colorWhite; }
+            }
+            
+            > span { font-size: 1.4rem; font-weight: 700; color: $colorGray; }
+          }
+        }
+      }
+    }
+
+    > .swiper {
+      width: 62.5rem; height: 25rem; margin-top: 2rem;
+      > .banner {
+        img { object-fit: contain; }
+      }
+      > .btn {
+        width: 3rem; height: 4rem; position: absolute; top: 50%; left: 2rem; transform: translateY(-50%); background: url(/assets/img/ico_arrow_left.png) no-repeat center / 100%; 
+        &.swiper-button-next { left: initial; right: 2rem; transform: translateY(-50%) rotate(180deg); }
+        
+        &::after { display: none; }
+      }
+    }
+
+    > .products {
+      margin-top: 2rem;
+      > ul {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+        li {
+          position: relative;
+          > a {
+            display: flex; gap: 1.5rem;
+            .img_box {
+              flex-shrink: 0; position: relative; width: 12rem; height: 12rem; padding: .3rem; border: .1rem solid $colorBlack; border-radius: 1rem; 
+              img { width: 100%; }
+            }
+            .description_box {
+              display: flex; flex-direction: column;
+              > strong { display: inline-block; width: max-content; padding: .2rem; background-color: $colorForestgreen; font-size: 1.4rem; color: $colorWhite; }
+              > b { 
+                font-size: 1.3rem; color: $colorBlack; margin: .3rem;
+                .brand_name { display: inline-block; margin-right: .2rem; color: $colorCornflowerblue; }
+              }
+              .price {
+                &_coupon { 
+                  display: flex; font-size: 1.6rem; font-weight: 700; color: $colorOrangered; 
+                  > del { color: $colorDarkgray; }
+                }
+                &_discount_percent { font-size: 2.4rem; font-weight: 600; color: $colorOrangered; }
+                &_result {
+                  font-size: 2.6rem; font-weight: 800;
+                }
+                
+              }
+            }
+          }
+          > .shopping_cart { position: absolute; left: 5.5rem; bottom: 1rem; width: 3.5rem; height: 3.5rem; padding: .3rem; background: url(/assets/img/ico_shopping_cart.png) no-repeat center / 2rem $colorWhite; border-radius: 100%; }
+        }
+      }
+    }
+
+  }
+
 }
+
+// .swiper {
+//   width: 600px;
+//   height: 300px;
+// }
